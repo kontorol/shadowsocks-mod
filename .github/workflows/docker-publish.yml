@@ -13,7 +13,7 @@ jobs:
       - uses: actions/checkout@v2
 
       - name: Build image
-        run: docker build . --file Dockerfile --tag sspaneluim/shadowsocks
+        run: docker build . --file Dockerfile --tag ttracy/shadowsocks
 
       - name: Login to docker hub
         uses: actions-hub/docker/login@master
@@ -24,4 +24,4 @@ jobs:
       - name: Push to docker hub :latest
         uses: actions-hub/docker@master
         with:
-          args: push sspaneluim/shadowsocks
+          args: push ttracy/shadowsocks
